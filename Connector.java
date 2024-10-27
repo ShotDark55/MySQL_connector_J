@@ -87,6 +87,44 @@ public abstract class Connector {
 	}
 	
 	
+	public void UpdateEmail(int id , String emp_email) {
+		
+		try {
+			connection.prepareStatement("update employe set " +
+		"emp_email = '" + emp_email + "' where emp_id = " + id).executeUpdate();
+		}catch(SQLException ex) {
+			
+		}
+		
+		
+	}
+	
+	
+	
+	public void UpdateSalary(int id , double salary ) {
+	
+		try {
+			connection.prepareStatement("update employe set " +
+		"salary = '" + salary + "' where emp_id = " + id ).executeUpdate();
+		}catch(SQLException ex ) {}
+	}
+			
+	
+	
+	public void UpdateName(int id , String emp_full_name) {
+		
+		try {
+			connection.prepareStatement("update employe set "
+					+ "emp_full_name = '" + emp_full_name + "' where emp_id = " + id).executeUpdate();
+		}catch(SQLException sqlE) {
+			
+		}
+		
+		
+	}
+	
+	
+	
 	
 	public void Delete(int id ) {
 			

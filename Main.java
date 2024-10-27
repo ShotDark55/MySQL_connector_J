@@ -11,9 +11,11 @@ public class Main {
 		
 		
 		
+		instance.Delete(20);
+				
 		
 		
-		instance.Delete(15);
+		
 		
 		
 		
