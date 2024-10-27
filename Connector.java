@@ -87,6 +87,19 @@ public abstract class Connector {
 	}
 	
 	
+	
+	public void Delete(int id ) {
+			
+
+		try {
+			connection.prepareStatement("delete from employe where emp_id = " + id).executeUpdate();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	
 	public String ShowTables() {
 			
 		String[] list;
